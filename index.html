@@ -1,0 +1,254 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ты не один</title>
+
+<style>
+:root{
+    --bg1:#fff7ea;
+    --bg2:#f5e7cb;
+    --text:#4b4032;
+    --accent:#e5b75d;
+    --card:#fffaf2;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family: system-ui, sans-serif;
+    color:var(--text);
+    background:linear-gradient(-45deg,var(--bg1),var(--bg2),#fff3dc,var(--bg1));
+    background-size:400% 400%;
+    animation:bgMove 20s ease infinite;
+    overflow-x:hidden;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.glow{
+    position:fixed;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(229,183,93,.25);
+    filter:blur(80px);
+    top:10%;
+    left:50%;
+    transform:translateX(-50%);
+    animation:breathe 6s ease-in-out infinite;
+    z-index:0;
+}
+
+@keyframes breathe{
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+        opacity:.5;
+    }
+    50%{
+        transform:translateX(-50%) scale(1.2);
+        opacity:.9;
+    }
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    max-width:700px;
+    margin:auto;
+    padding:40px 24px 80px;
+}
+
+.hero{
+    min-height:60vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+}
+
+.star{
+    font-size:2rem;
+    margin-bottom:20px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+h1{
+    font-size:2.6rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.subtitle{
+    font-size:1.1rem;
+    line-height:1.7;
+    opacity:.85;
+    max-width:500px;
+    margin:auto;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeIn 1.2s forwards;
+}
+
+.delay1{animation-delay:.2s;}
+.delay2{animation-delay:.5s;}
+.delay3{animation-delay:.8s;}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.letter{
+    margin-top:40px;
+    background:rgba(255,250,242,.8);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:28px;
+    line-height:1.9;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.05);
+}
+
+.letter h2{
+    margin-bottom:20px;
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.letter p{
+    margin-bottom:16px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    opacity:.6;
+    font-size:.9rem;
+}
+
+@media (max-width:480px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .letter{
+        padding:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<div class="container">
+
+    <section class="hero">
+        <div class="star fade">✦</div>
+
+        <h1 class="fade delay1">
+            Ты не один
+        </h1>
+
+        <p class="subtitle fade delay2">
+            Иногда важно просто помнить,
+            что рядом есть что-то тёплое.
+        </p>
+    </section>
+
+    <section class="letter fade delay3">
+        <h2>Письмо</h2>
+
+        <p>
+            Здесь будет основной текст. Этот блок специально
+            рассчитан на длинное сообщение примерно 150–250 слов.
+            Ты сможешь заменить этот текст своим собственным.
+        </p>
+
+        <p>
+            Можно рассказать историю, поделиться мыслями,
+            оставить напоминание, воспоминание или просто
+            написать несколько вещей, которые хотелось бы
+            сохранить здесь надолго.
+        </p>
+
+        <p>
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+            Визуально этот блок сделан как спокойная записка
+            или письмо. Он хорошо читается на телефоне,
+            не выглядит перегруженным и оставляет достаточно
+            пространства для большого объёма текста.
+        </p>
+
+        <p>
+            Добавляй столько абзацев, сколько потребуется.
+            Высота блока автоматически увеличится,
+            поэтому страница останется удобной даже
+            с очень длинным сообщением.
+        </p>
+    </section>
+
+    <div class="footer">
+        ✦
+    </div>
+
+</div>
+
+</body>
+</html>
+```
